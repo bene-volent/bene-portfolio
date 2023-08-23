@@ -392,7 +392,6 @@ a[data-icon-name] {
     }
 }
 .icon {
-    
     font-size: inherit;
     color: inherit;
 }
@@ -699,27 +698,30 @@ section {
         }
     }
 
-    &[data-even="true"] &{
-        &-title{
-            @include mq(){
-            grid-area: 1 / 1 / 1 / 2;
-            text-align: end;
-
+    &[data-even="true"] & {
+        &-title {
+            @include mq() {
+                grid-area: 1 / 1 / 1 / 2;
+                text-align: end;
             }
         }
-        &-image{
-           @include mq(){ grid-area: 1 / 2 / 3 / 3;
-}
+        &-image {
+            @include mq() {
+                box-shadow:
+                    -5px 5px 0px #b2b2b1,
+                    5px -5px 5px 0px hsl(0 0% 62% / 0.1);
+
+                grid-area: 1 / 2 / 3 / 3;
+            }
         }
-        &-content{
+        &-content {
             @include mq() {
                 text-align: end;
                 grid-area: 2 / 1 / 3 / 2;
             }
         }
-        &-links{
-            @include mq()
-            {
+        &-links {
+            @include mq() {
                 justify-content: flex-end;
             }
         }
@@ -729,8 +731,6 @@ section {
             font-size: var(--size-5);
         }
     }
-
-    
 
     &-desc {
         margin-top: 1em;
@@ -749,14 +749,25 @@ section {
         border-radius: var(--size-1);
         font-weight: 500;
 
+        box-shadow: var(--shadow-lg);
+
         @include mq(sm) {
             padding: var(--size-4);
+        }
+
+        &:active{
+            translate: 0 2px;
         }
     }
 
     &-preview {
         background-color: hsl(var(--accent));
         color: hsl(var(--back));
+
+        &:active{
+             box-shadow: inset 0 5px 3px hsl(0 0% 0% / 0.5);
+
+        }
     }
 
     &-detail {
@@ -769,6 +780,17 @@ body[data-theme="dark"] {
         box-shadow:
             10px 10px 0px #171718,
             -5px -5px 5px 0px hsl(0 0% 62% / 0.1);
+
+         
+    }
+    .projectCard[data-even="true"]{
+        .projectCard-image {
+        box-shadow:
+            -10px 10px 0px #171718,
+            5px -5px 5px 0px hsl(0 0% 62% / 0.1);
+
+         
+    }
     }
 
     .projectCard-preview {
