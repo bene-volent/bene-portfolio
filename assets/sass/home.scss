@@ -116,6 +116,7 @@ $screenSize: (
         align-items: center;
 
         font-size: var(--size-12);
+        color:hsl(var(--accent));
 
         @include mq(sm) {
             flex-direction: column;
@@ -150,7 +151,9 @@ $screenSize: (
         }
     }
 }
-
+body[data-theme="dark"] .hero-socials{
+    color:hsl(var(--text));
+}
 .name-effect {
     background: linear-gradient(120deg, hsl(var(--primary)) 5%, hsl(var(--accent)) 80%);
     -webkit-background-clip: text;
