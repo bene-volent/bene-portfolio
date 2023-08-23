@@ -7,7 +7,7 @@
             </li>
 
             <li class="nav-item">
-                <NuxtLink class="nav-link" @click="() => { clickMenuButton() }" href="/#contact">Contact</NuxtLink>
+                <NuxtLink class="nav-link" @click="() => { clickMenuButton() }" to="/#contact">Contact</NuxtLink>
             </li>
             <li class="nav-item">
                 <NuxtLink class="nav-link " @click="() => { clickMenuButton() }" to="/works"

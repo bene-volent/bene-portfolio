@@ -18,6 +18,6 @@
 <script setup>
 
 let { project } = defineProps({
-    project: Object
+    project: Object,
 })
 </script>
