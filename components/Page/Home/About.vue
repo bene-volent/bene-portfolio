@@ -1,6 +1,6 @@
 <template>
     <PageSectionContainer class="[ about ]">
-        <NuxtImg class="about-img" src="/logo.png" alt="Bene's Avatar" format="webp" />
+        <NuxtImg class="about-img" src="/logo.png" loading="lazy" alt="Bene's Avatar" format="webp" />
         <div class="about-content">
             <h2 class="section-heading">About Me</h2>
             <p class="about-text">I am Raghav, a 23-year-old Master’s student and an <span class="bold">Aspiring Frontend

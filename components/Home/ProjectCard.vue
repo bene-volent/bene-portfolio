@@ -1,7 +1,7 @@
 <template>
     <article class="projectCard">
         <h3 class="projectCard-title">{{ project.name }}</h3>
-        <NuxtImg :src="project.img" format="webp" class="projectCard-image" :alt="project.name" />
+        <NuxtImg :src="project.img" format="webp" loading="lazy" class="projectCard-image" :alt="project.name" />
         <div class="projectCard-content">
             <p class="projectCard-desc">{{ project.desc }}</p>
             <div class="projectCard-links">
