@@ -38,43 +38,4 @@ $screenSize: (
     }
 }
 
-.theme-picker {
-    aspect-ratio: 1;
-    font-size: var(--size-6);
-
-    border-radius: var(--size-2);
-
-    width: var(--size-12);
-    aspect-ratio: 1;
-
-    background-color: hsl(var(--text));
-    color: hsl(var(--back));
-
-    box-shadow: var(--shadow-inner);
-
-    font-size: var(--size-8);
-
-    &[data-theme="light"] {
-        background-color: hsl(var(--accent));
-
-        color: #f0f0f0;
-    }
-
-    &:active {
-        translate: 0 3px;
-    }
-
-    &:focus{
-        scale: 1.05;
-    }
-
-}
-
-.icon-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 </style>
