@@ -9,8 +9,8 @@
                 project.</p>
         </div>
         <ul class="projects-list">
-            <li v-for="project in projects" class="[ projects-item ] [ load-on-scroll ]">
-                <HomeProjectCard :project="project" />
+            <li v-for="(project,index) in projects" class="[ projects-item ] [ load-on-scroll ]">
+                <HomeProjectCard :project="project" :order="index"/>
             </li>
         </ul>
     </PageSectionContainer>

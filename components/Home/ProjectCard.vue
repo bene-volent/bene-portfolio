@@ -1,5 +1,5 @@
 <template>
-    <article class="projectCard">
+    <article class="projectCard" :data-even="order % 2 === 1">
         <h3 class="projectCard-title">{{ project.name }}</h3>
         <NuxtImg :src="project.img" format="webp" loading="lazy" class="projectCard-image" :alt="project.name" />
         <div class="projectCard-content">
@@ -17,7 +17,8 @@
 
 <script setup>
 
-let { project } = defineProps({
+let { project,order } = defineProps({
     project: Object,
+    order : Number
 })
 </script>
