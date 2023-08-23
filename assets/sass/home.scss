@@ -392,6 +392,12 @@ body[data-theme="dark"] .skills-more {
         }
     }
 
+    &-subtitle{
+        @include mq(lg){
+            font-size: var(--size-5);
+        }
+    }
+
     &-list {
         list-style: none;
         padding-left: 0;
