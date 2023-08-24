@@ -4,12 +4,13 @@
         <PageHomeAbout id="about" class="[ load-on-scroll ]" />
         <PageHomeSkills id="skills" />
         <PageHomeProjects id="projects" />
-        <PageHomeCTA id="contact" />
+        <PageCTA id="contact" />
     </main>
 </template>
 
 
 <script setup>
+
 useHead({
 
     title: "Bene's Portfolio | Home",
@@ -56,6 +57,6 @@ onMounted(() => {
 </script>
 
 
-<style lang="scss">
+<style lang="scss"  >
 @use "~/assets/sass/home.scss";
 </style>

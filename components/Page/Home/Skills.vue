@@ -5,35 +5,35 @@
             <li class="[ skills-group ] [ load-on-scroll ]">
                 <h3 class="skills-group-heading">Technologies</h3>
                 <div class="skills-grid">
-                    <HomeSkill name="html" />
-                    <HomeSkill name="css" />
-                    <HomeSkill name="js" />
-                    <HomeSkill name="p5js" />           
-                    <HomeSkill name="sass/scss" />
-                    <HomeSkill name="react" />
-                    <HomeSkill name="vue" />
-                    <HomeSkill name="nuxt" />
-                    <HomeSkill name="c" />
-                    <HomeSkill name="cpp" />
-                    <HomeSkill name="python" />
+                    <PageHomeSkill name="html" />
+                    <PageHomeSkill name="css" />
+                    <PageHomeSkill name="js" />
+                    <PageHomeSkill name="p5js" />           
+                    <PageHomeSkill name="sass/scss" />
+                    <PageHomeSkill name="react" />
+                    <PageHomeSkill name="vue" />
+                    <PageHomeSkill name="nuxt" />
+                    <PageHomeSkill name="c" />
+                    <PageHomeSkill name="cpp" />
+                    <PageHomeSkill name="python" />
                 </div>
             </li>
             <li class="[ skills-group ] [ load-on-scroll ]">
                 <h3 class="skills-group-heading">Tools</h3>
                 <div class="skills-grid">
-                    <HomeSkill name="figma" />
-                    <HomeSkill name="vscode" />
-                    <HomeSkill name="vercel" />
-                    <HomeSkill name="github" />
+                    <PageHomeSkill name="figma" />
+                    <PageHomeSkill name="vscode" />
+                    <PageHomeSkill name="vercel" />
+                    <PageHomeSkill name="github" />
                 </div>
             </li>
             <li class="[ skills-group ] [ load-on-scroll ]">
                 <h3 class="skills-group-heading">To Learn</h3>
                 <div class="skills-grid">
-                    <HomeSkill name="next" />
-                    <HomeSkill name="django" />
-                    <HomeSkill name="flutter" />
-                    <HomeSkill name="kotlin" />
+                    <PageHomeSkill name="next" />
+                    <PageHomeSkill name="django" />
+                    <PageHomeSkill name="flutter" />
+                    <PageHomeSkill name="kotlin" />
                     <p class="skills-more">and much more...</p>
                 </div>
             </li>

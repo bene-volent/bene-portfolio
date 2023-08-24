@@ -11,7 +11,7 @@ $screenSize: (
 }
 
 /***** Hero *****/
-.hero {
+.home-hero {
     .wrapper {
         padding-block: 0;
         padding-top: var(--size-10);
@@ -160,10 +160,10 @@ $screenSize: (
         }
     }
 }
-body[data-theme="dark"] .hero-socials {
+body[data-theme="dark"] .home-hero-socials {
     color: hsl(var(--text));
 }
-.name-effect {
+.home-name-effect {
     background: linear-gradient(120deg, hsl(var(--primary)) 5%, hsl(var(--accent)) 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -293,7 +293,7 @@ body[data-theme="dark"] .hero-socials {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero {
+    .home-hero {
         &-social {
             -webkit-animation: none;
             animation: none;
@@ -415,7 +415,7 @@ body[data-theme="dark"] .skills-more {
 /***** Project Section *****/
 
 /***** Project Card *****/
-.projectCard {
+.home-projectCard {
     display: grid;
     gap: var(--grid-gap);
     // padding: var(--size-4);
@@ -547,13 +547,13 @@ body[data-theme="dark"] .skills-more {
 }
 
 body[data-theme="dark"] {
-    .projectCard-image {
+    .home-projectCard-image {
         box-shadow:
             10px 10px 0px #171718,
             -5px -5px 5px 0px hsl(0 0% 62% / 0.1);
     }
-    .projectCard[data-even="true"] {
-        .projectCard-image {
+    .home-rojectCard[data-even="true"] {
+        .home-projectCard-image {
             @include mq() {
                 box-shadow:
                     -10px 10px 0px #171718,
@@ -562,13 +562,13 @@ body[data-theme="dark"] {
         }
     }
 
-    .projectCard-preview {
+    .home-projectCard-preview {
         background-color: hsl(var(--text));
     }
 }
 /***** End Project Card *****/
 
-.projects {
+.home-projects {
     // border-top: 1px solid hsl(var(--text));
 
     --grid-gap: var(--size-4);

@@ -2,7 +2,7 @@
 <template>
     <PageSection>
         <div class="container">
-            <div class="wrapper">
+            <div :class="`${wrapper?wrapper:''} wrapper`">
                 <slot />
             </div>
         </div>
@@ -10,5 +10,9 @@
 </template>
 
 <script setup>
-
+let {wrapper} = defineProps(
+    {
+        wrapper:String
+    }
+)
 </script>
