@@ -22,9 +22,9 @@ $screenSize: (
 
         position: relative;
 
+        justify-content: space-between;
         @include mq() {
             padding-block: var(--size-10);
-            justify-content: space-between;
         }
     }
 
@@ -33,9 +33,14 @@ $screenSize: (
 
         &-name {
             position: relative;
-
+            max-width: -webkit-fit-content;
+            max-width: -moz-fit-content;
+            max-width: fit-content;
+            display: inline-flex;
+            text-align: start;
             > * {
-                position: absolute;
+                // position: absolute;
+                display: inline-block;
                 left: 0;
                 max-width: 0;
                 overflow: hidden;
@@ -61,17 +66,19 @@ $screenSize: (
         @include mq() {
             font-size: clamp(var(--size-18), 7vw, var(--size-24));
             line-height: 1.2;
+            text-align: center;
         }
     }
 
     &-name {
-        -webkit-animation: type-word 6s linear infinite;
-        animation: type-word 6s linear infinite;
+        -webkit-animation: type-name 6s linear infinite;
+                animation: type-name 6s linear infinite;
+        
     }
 
     &-alias {
-        -webkit-animation: type-word 6s linear 3s infinite;
-        animation: type-word 6s linear 3s infinite;
+        -webkit-animation: type-alias 6s linear 3s infinite;
+                animation: type-alias 6s linear 3s infinite;
     }
 
     &-content {
@@ -94,7 +101,11 @@ $screenSize: (
 
         @include mq(sm) {
             line-height: 1.1;
-            font-size: clamp(var(--size-8), 4vw, var(--size-12));
+            font-size: clamp(var(--size-8), 4vw, var(--size-10));
+        }
+        @include mq(){
+            text-align: center;
+
         }
     }
 
@@ -211,7 +222,9 @@ body[data-theme="dark"] .hero-socials{
     }
 }
 
-@-webkit-keyframes type-word {
+
+
+@-webkit-keyframes type-name {
     0%,
     45%,
     100% {
@@ -229,7 +242,9 @@ body[data-theme="dark"] .hero-socials{
     }
 }
 
-@keyframes type-word {
+
+
+@keyframes type-name {
     0%,
     45%,
     100% {
@@ -244,6 +259,42 @@ body[data-theme="dark"] .hero-socials{
     18%,
     27% {
         max-width: 7ch;
+    }
+}
+
+@-webkit-keyframes type-alias {
+    0%,
+    45%,
+    100% {
+        max-width: 0ch;
+    }
+
+    9%,
+    36% {
+        max-width: 2.5ch;
+    }
+
+    18%,
+    27% {
+        max-width: 5ch;
+    }
+}
+
+@keyframes type-alias {
+    0%,
+    45%,
+    100% {
+        max-width: 0ch;
+    }
+
+    9%,
+    36% {
+        max-width: 2.5ch;
+    }
+
+    18%,
+    27% {
+        max-width: 5ch;
     }
 }
 

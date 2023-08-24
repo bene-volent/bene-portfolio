@@ -35,6 +35,11 @@ const clickMenuButton = () => {
     }
 }
 
+// onUpdated(() => {
+//     console.log("UPDATED")
+//     console.log(targetNav.value.querySelectorAll(".nav-item"))
+//     targetNav.value.querySelectorAll(".nav-item").forEach((navItem, index) => { navItem.style.setProperty("--_nav-index", index); })
+// })
 
 onMounted(() => {
     targetNav.value.querySelectorAll(".nav-item").forEach((navItem, index) => { navItem.style.setProperty("--_nav-index", index); })

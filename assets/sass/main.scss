@@ -348,8 +348,14 @@ a[data-icon-name] {
         transform: translateY(-25%) scale(1);
     }
 
+    &:not(.footer-social-link){
+        &::before {
+            background-color: hsl(var(--accent));
+        }
+    }
+
     @include mq(sm) {
-        &:not(.footer__social_link) {
+        &:not(.footer-social-link) {
             &::before {
                 right: 100%;
                 left: auto;
@@ -366,6 +372,9 @@ a[data-icon-name] {
             }
         }
     }
+}
+body[data-theme="dark"] a[data-icon-name]::before{
+    background-color: hsl(var(--text));
 }
 
 .accent {
@@ -785,10 +794,10 @@ body[data-theme="dark"] {
     }
     .projectCard[data-even="true"]{
         .projectCard-image {
-        box-shadow:
+       @include mq(){ box-shadow:
             -10px 10px 0px #171718,
             5px -5px 5px 0px hsl(0 0% 62% / 0.1);
-
+}
          
     }
     }
