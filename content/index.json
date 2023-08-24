@@ -3,41 +3,41 @@
         "name": "Frontend Mentor Projects",
         "preview": "https://frontend-mentor-bene.vercel.app",
         "desc": "A catalog of all the completed solutions in Frontend Mentor. Using plain Vue.js, SCSS and data fetching from json.",
-        "detailPath": "/works",
+        "detailPath": "/works/frontend-mentor-projects",
         "img": "/works/frontend-mentor-banner.png"
     }, {
         "name": "The Odin Project List",
         "preview": "https://odinprojects-bene.vercel.app",
         "desc": "A website to showcase all the projects created for The Odin Project. The parent project uses no framework, plain'ol HTML, CSS and JS",
-        "detailPath": "/works",
+        "detailPath": "/works/odin-project-list",
         "img": "/works/odin-project-banner.png"
     }
     , {
         "name": "Huddle Landing Page",
         "preview": "https://huddle-theta-six.vercel.app/",
         "desc": "Landing page for Huddle. A platform to build communities and connections.",
-        "detailPath": "/works",
+        "detailPath": "/works/huddle-landing-page",
         "img": "/works/huddle-landing-page-banner.png"
     }
     , {
         "name": "Odin Library",
         "preview": "https://odinprojects-bene.vercel.app/projects/library/",
         "desc": "A personal library for enthusiastic readers. Built with using dynamic content from vanilla JS and CSS",
-        "detailPath": "/works",
+        "detailPath": "/works/odin-library",
         "img": "/works/odin-library-banner.png"
     }
     , {
         "name": "Better Decor Signup Page",
         "preview": "https://odinprojects-bene.vercel.app/projects/signup-form/",
         "desc": "A signup page for 'Better Decor', an Interior Designing Company.",
-        "detailPath": "/works",
+        "detailPath": "/works/better-decor",
         "img": "/works/better-decor-signup-banner.png"
     }
     , {
         "name": "Project Dashboard",
         "preview": "https://odinprojects-bene.vercel.app/projects/dashboard/",
         "desc": "A dashboard to share your projects with your collegues and friends",
-        "detailPath": "/works",
+        "detailPath": "/works/project-dashboard",
         "img": "/works/project-dashboard-banner.png"
     }
     
