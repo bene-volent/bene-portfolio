@@ -1,5 +1,5 @@
 <template>
-    <header ref="headerRef" class="header" :data-on-top="y < 25">
+    <header ref="headerRef" class="header" :data-on-top="y < 25" :data-is-home="!($route.path.includes('blogs') || $route.path.includes('works'))">
         <div class="container">
             <div class="wrapper">
                 <NuxtLink class="header-logo" to="/">
