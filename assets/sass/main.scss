@@ -457,9 +457,9 @@ section {
         background-color: hsl(var(--back) / 0.99);
     }
 
-    &[data-is-home="false"]{
-        background-color: transparent;
-    }
+    // &[data-is-home="false"]{
+    //     background-color: transparent;
+    // }
     .wrapper {
         // margin-block: var(--size-4);
         height: var(--header-height);
