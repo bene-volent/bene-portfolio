@@ -1,20 +1,58 @@
 
 <script setup>
+import { useTimeout } from '@vueuse/core';
+
 
 const { path } = useRoute()
 const projectRef = ref(null)
+let project = ref(null)
 
-const { data } = await useAsyncData(`content-${path}`, () => queryContent().where({ _path: path }).findOne())
+try {
 
-const project = data
+    const { data } = await useAsyncData(`content-${path}`, () => queryContent().where({ _path: path }).findOne())
+    project = data
+} catch (error) {
+    // Error has been handled on mount and by a 404 page.
+}
 
 
-onMounted(()=>{
-    if (projectRef){
-        projectRef.value.querySelectorAll(".project-content .content a[rel='nofollow']").forEach((anchor)=>{
+
+onMounted(() => {
+    // console.log(project,projectRef)
+    if (projectRef.value) {
+        projectRef.value.querySelectorAll(".project-content .content a[rel='nofollow']").forEach((anchor) => {
             // console.log(anchor)
-            anchor.setAttribute("target","_blank")
+            anchor.setAttribute("target", "_blank")
         })
+    }
+    if (project.value) {
+        useHead({
+
+            title: `Bene's Work | ${project.value.title}`,
+            meta: [
+                {
+                    name: "description",
+                    content: `${project.value.description}`
+                }
+            ],
+
+        });
+    }
+    else {
+
+        // navigateTo()
+        useTimeout(2000, { callback: () => { navigateTo("/works") } })
+        useHead({
+
+            title: `Bene's Work | 404`,
+            meta: [
+                {
+                    name: "description",
+                    content: `There is project with this name. All projects are given in the root works page.`
+                }
+            ],
+
+        });
     }
 })
 
@@ -22,7 +60,7 @@ onMounted(()=>{
 </script>
 
 <template>
-    <main v-if="project" ref="projectRef" >
+    <main v-if="project" ref="projectRef">
         <PageSectionContainer class="project-hero">
 
             <NuxtImg :src="project.img" format="webp" :alt="project.title" class="project-banner" />
@@ -48,7 +86,7 @@ onMounted(()=>{
         </PageSectionContainer>
         <PageSectionContainer class="project-content">
             <div class="content">
-                <ContentRenderer :value="data" />
+                <ContentRenderer :value="project" />
             </div>
             <aside class="content-toc lg-only">
                 <div class="content-toc-container">
@@ -68,7 +106,10 @@ onMounted(()=>{
         <PageCTA heading="Found it interesting?" id="connect-with-me" />
     </main>
     <main v-else>
-        404
+        <PageSection style="min-height: calc(100vh - 250px);display: grid;place-content: center;text-align: center;background-color: hsl(var(--secondary));">
+            <h1 class="section-heading" style="">404</h1>
+            <p>You are being taken back to works page.</p>
+        </PageSection>
     </main>
 </template>
 
@@ -232,65 +273,75 @@ $screenSize: (
     }
 }
 
-.content{
-    h2{
-        margin-top: 1.25em ;
+.content {
+    h2 {
+        margin-top: 1.25em;
 
-        @include mq(){
+        @include mq() {
             font-size: var(--size-7);
         }
     }
 
-    p{
+    p {
         font-size: 16px;
-        @include mq(){
-            font-size: calc(var(--size-4) + (var(--size-1) / 2) );
+
+        @include mq() {
+            font-size: calc(var(--size-4) + (var(--size-1) / 2));
         }
-        @include mq(lg){
+
+        @include mq(lg) {
             font-size: calc(var(--size-5));
         }
     }
-    h2 + p{
+
+    h2+p {
         margin-top: 1em;
     }
-    p + p{
+
+    p+p {
         margin-top: 0.75em;
     }
-    img,video,svg{
+
+    img,
+    video,
+    svg {
         margin-block: var(--size-4);
         border-radius: var(--size-1);
     }
 
-    ol,ul,dl{
+    ol,
+    ul,
+    dl {
         margin-top: var(--size-3);
     }
-    ul li{
-        &::marker{
+
+    ul li {
+        &::marker {
             color: hsl(var(--accent));
 
-            @include dark(){
+            @include dark() {
                 color: hsl(var(--text));
             }
         }
     }
 
-    ol li{
-        &::marker{
+    ol li {
+        &::marker {
             font-size: 1.25em;
-            font-weight:600;
+            font-weight: 600;
             color: hsl(var(--accent));
 
-            @include dark(){
+            @include dark() {
                 color: hsl(var(--text));
             }
         }
     }
 
-    hr{
+    hr {
         margin-block: var(--size-2);
     }
 
-    pre{
+    pre {
         padding: var(--size-6);
         border: 1px solid hsl(var(--primary));
         // font-size: var(--size-4);
@@ -300,50 +351,50 @@ $screenSize: (
         border-radius: var(--size-2);
         font-size: var(--size-3);
 
-        @include mq(sm){
-            font-size:var(--size-4)
+        @include mq(sm) {
+            font-size: var(--size-4)
         }
-       
 
-        
+
+
 
 
     }
-    * + pre {
+
+    *+pre {
         margin-top: var(--size-4);
     }
 
     p code {
         background-color: hsl(var(--secondary));
-        padding: var(--size-1); 
+        padding: var(--size-1);
         font-weight: 400;
         font-size: var(--size-3);
 
-@include mq(sm){
-    font-size:var(--size-4)
-}
-
-}
-
-    a:not([href^="#"]){
-        text-decoration: underline;
-
-        color:rgb(79, 93, 255);
-
-        
-    
-        &:hover{
-            text-underline-offset: 0.25em;
+        @include mq(sm) {
+            font-size: var(--size-4)
         }
-        
+
     }
 
-    .contains-task-list{
+    a:not([href^="#"]) {
+        text-decoration: underline;
+
+        color: rgb(79, 93, 255);
+
+
+
+        &:hover {
+            text-underline-offset: 0.25em;
+        }
+
+    }
+
+    .contains-task-list {
         list-style: none;
         padding-left: 0;
 
-       
+
     }
 }
-
 </style>
