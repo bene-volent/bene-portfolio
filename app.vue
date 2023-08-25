@@ -1,5 +1,6 @@
 <template>
     <NuxtLayout>
+        <NuxtLoadingIndicator height="3"/>
         <NuxtPage class="main">
         </NuxtPage>
     </NuxtLayout>
@@ -9,7 +10,19 @@
 
 
 <style lang="scss">
-
+@mixin dark() {
+    body[data-theme="dark"] & {
+        @content;
+    }
+}
+.nuxt-loading-indicator{
+    background: hsl(var(--accent)) !important;
+    top: var(--header-height) !important;
+    
+    @include dark(){
+        background: hsl(var(--text)) !important;
+    }
+}
 
 .page-enter-active,
 .page-leave-active {
