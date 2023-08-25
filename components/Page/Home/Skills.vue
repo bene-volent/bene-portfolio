@@ -31,9 +31,11 @@
                 <h3 class="skills-group-heading">To Learn</h3>
                 <div class="skills-grid">
                     <PageHomeSkill name="next" />
+<PageHomeSkill name="tailwind" />
                     <PageHomeSkill name="django" />
                     <PageHomeSkill name="flutter" />
                     <PageHomeSkill name="kotlin" />
+
                     <p class="skills-more">and much more...</p>
                 </div>
             </li>
