@@ -2,6 +2,7 @@
 title: Better Decor Signup Page
 description: A signup page for 'Better Decor', an Interior Designing Company.
 path: /works/better-decor
+preview: https://odinprojects-bene.vercel.app/projects/signup-form/
 img: /works/better-decor-signup-banner.png
 year: 2023
 category: The Odin Project

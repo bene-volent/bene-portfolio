@@ -3,6 +3,7 @@ title: 'The Odin Project List'
 description: "A website to showcase all the projects created for The Odin Project. The parent project uses no framework, plain'ol HTML, CSS and JS"
 path: "/works/odin-project-list"
 img: "/works/odin-project-banner.png"
+preview: https://odinprojects-bene.vercel.app
 year: 2023
 category: "Personal Project"
 framework: "None"

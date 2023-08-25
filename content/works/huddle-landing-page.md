@@ -3,6 +3,7 @@ title: 'Huddle Landing Page'
 description: "Landing page for Huddle. A platform to build communities and connections."
 path: "/works/huddle-landing-page"
 img: "/works/huddle-landing-page-banner.png"
+preview: https://huddle-theta-six.vercel.app/
 year: 2023
 category: "Frontend Mentor"
 framework: "None"

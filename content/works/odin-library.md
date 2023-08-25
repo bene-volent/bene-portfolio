@@ -3,6 +3,7 @@ title: 'Odin Library'
 description: "A personal library for enthusiastic readers. Built with using dynamic content from vanilla JS and CSS."
 path: "/works/odin-library"
 img: "/works/odin-library-banner.png"
+preview: https://odinprojects-bene.vercel.app/projects/library/
 year: 2023
 category: "The Odin Project"
 framework: "None"

@@ -3,6 +3,7 @@ title: 'Frontend Mentor Projects'
 description: "A catalog of all the completed solutions in Frontend Mentor. Using plain Vue.js, SCSS and data fetching from json."
 path: "/works/frontend-mentor-projects"
 img: "/works/frontend-mentor-banner.png"
+preview: https://frontend-mentor-bene.vercel.app
 year: 2023
 category: "Personal Project"
 framework: "Vue.js"
