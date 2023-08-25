@@ -4,6 +4,7 @@ description: "A dashboard to share your projects with your collegues and friends
 path: "/works/project-dashboard"
 img: "/works/project-dashboard-banner.png"
 preview: https://odinprojects-bene.vercel.app/projects/dashboard/
+repo: https://github.com/bene-volent/odin-project-repo/tree/main/projects/dashboard
 year: 2023
 category: "The Odin Project"
 framework: "None"

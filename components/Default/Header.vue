@@ -3,7 +3,7 @@
         <div class="container">
             <div class="wrapper">
                 <NuxtLink class="header-logo" to="/">
-                    <p class="sr-only">Go to Home   </p>
+                    <p class="sr-only">Go to Home</p>
                     <NuxtImg class="header-logo-img" format="webp" src="/logo.png" alt="Logo" />
                 </NuxtLink>
                 <DefaultNavigation ref="nav" :data-open="navOpen" :navControl="changeNavState"></DefaultNavigation>

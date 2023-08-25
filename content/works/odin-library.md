@@ -4,6 +4,7 @@ description: "A personal library for enthusiastic readers. Built with using dyna
 path: "/works/odin-library"
 img: "/works/odin-library-banner.png"
 preview: https://odinprojects-bene.vercel.app/projects/library/
+repo: https://github.com/bene-volent/odin-project-repo/tree/main/projects/library
 year: 2023
 category: "The Odin Project"
 framework: "None"

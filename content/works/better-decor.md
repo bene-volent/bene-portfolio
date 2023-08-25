@@ -2,6 +2,7 @@
 title: Better Decor Signup Page
 description: A signup page for 'Better Decor', an Interior Designing Company.
 path: /works/better-decor
+repo: https://github.com/bene-volent/odin-project-repo/tree/main/projects/signup-form
 preview: https://odinprojects-bene.vercel.app/projects/signup-form/
 img: /works/better-decor-signup-banner.png
 year: 2023

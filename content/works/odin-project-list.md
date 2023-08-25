@@ -4,6 +4,7 @@ description: "A website to showcase all the projects created for The Odin Projec
 path: "/works/odin-project-list"
 img: "/works/odin-project-banner.png"
 preview: https://odinprojects-bene.vercel.app
+repo: https://github.com/bene-volent/odin-project-repo/
 year: 2023
 category: "Personal Project"
 framework: "None"
