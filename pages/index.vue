@@ -20,18 +20,23 @@ useHead({
             content: 'Welcome to my portfolio. My name is Raghav \\ Bene. Here you can learn about me and my projects. I am a Frontend Developer with approximately 1 year\'s experience with HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt.'
         }
     ],
-
+    link: [
+        {
+            rel: 'canonical',
+            href: `https://bene-portfolio.vercel.app/`
+        }]
 
 });
 useSeoMeta({
     ogTitle: "Bene's Portfolio",
     ogDescription: 'Welcome to my portfolio. My name is Raghav \\ Bene. Here you can learn about me and my projects. I am a Frontend Developer with approximately 1 year\'s experience with HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt.',
-    ogImage: '/meta-img.png',
+    ogImage: 'https://bene-portfolio.vercel.app/meta-img.png',
     ogUrl: 'https://bene-portfolio.vercel.app',
     twitterTitle: 'Bene\'s Portfolio',
     twitterDescription: 'Welcome to my portfolio. My name is Raghav \\ Bene. Here you can learn about me and my projects. I am a Frontend Developer with approximately 1 year\'s experience with HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt.',
-    twitterImage: '/logo-circle.png',
-    twitterCard: 'This is my portfolio.'
+    twitterImage: 'https://bene-portfolio.vercel.app/logo-circle.png',
+    twitterCard: 'This is my portfolio.',
+    twitterCreator:"@bene_volent_",
 })
 
 let mainRef = ref(null)

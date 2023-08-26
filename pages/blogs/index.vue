@@ -15,6 +15,12 @@ useHead({
         }
     ],
 
+    link: [
+        {
+            rel: 'canonical',
+            href: `https://bene-portfolio.vercel.app/blogs`
+        }]
+
 });
 useSeoMeta({
     ogTitle: "Bene's Blogs",
@@ -24,10 +30,10 @@ useSeoMeta({
     twitterTitle: 'Bene\'s Blogs',
     twitterDescription: 'This is Bene\'s \\ Raghav\'s personal blog. Here you can find all my latest tech information, new tools and my experiences with such tools. Currently this page is a work in progress!',
     twitterImage: '/logo-circle.png',
-    twitterCard: 'This is Bene\'s \\ Raghav\'s personal blog. Here you can find all my latest tech information, new tools and my experiences with such tools. Currently this page is a work in progress!'
+    twitterCard: 'This is Bene\'s \\ Raghav\'s personal blog. Here you can find all my latest tech information, new tools and my experiences with such tools. Currently this page is a work in progress!',
+    twitterCreator:"@bene_volent_"
+
 })
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

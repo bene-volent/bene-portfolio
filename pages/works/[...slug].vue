@@ -35,18 +35,26 @@ onMounted(() => {
                     content: `${project.value.description}`
                 }
             ],
-
+           link:[
+            {
+                rel:'canonical',
+                href:`https://bene-portfolio.vercel.app${path}`
+            }
+           ]
         });
 
         useSeoMeta({
+            
             ogTitle: `Bene's Work | ${project.value.title}`,
             ogDescription: `${project.value.description}`,
-            ogImage: '/meta-img.png',
+            ogImage: 'https://bene-portfolio.vercel.app/meta-img.png',
             ogUrl: `https://bene-portfolio.vercel.app${path}`,
             twitterTitle: `Bene's Work | ${project.value.title}`,
             twitterDescription: `${project.value.description}`,
-            twitterImage: '/logo-circle.png',
-            twitterCard: `${project.value.description}`
+            twitterImage: 'https://bene-portfolio.vercel.app/logo-circle.png',
+            twitterCard: `${project.value.description}`,
+    twitterCreator:"@bene_volent_"
+
         })
     }
     else {
