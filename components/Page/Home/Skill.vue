@@ -26,7 +26,8 @@ let names = {
     "sass/scss": "akar-icons:sass-fill",
     vercel: 'akar-icons:vercel-fill',
     vscode: 'akar-icons:vscode-fill',
-    vue: "akar-icons:vue-fill"
+    vue: "akar-icons:vue-fill",
+tailwind:"mdi:tailwind"
 }
 
 let { name } = defineProps({
