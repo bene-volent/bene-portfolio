@@ -1,5 +1,5 @@
 <template>
-    <PageSectionContainer class="home-hero">
+    <PageSectionContainer class="home-hero" aria-label="hero">
         <h1 class="[ home-hero-title ]">
             <span class="small">Hello</span>
             <br>

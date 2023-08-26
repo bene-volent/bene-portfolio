@@ -1,7 +1,7 @@
 <template>
     <button ref="themePicker" type="button" class="theme-picker" :data-theme="lightTheme ? 'light' : 'dark'"
         @click="changeColor">
-        <span class="sr-only">Change Theme <span class="sr-only">to {{ lightTheme ?'dark':'light' }} mode</span></span>
+        <span class="sr-only">Change Theme <span class="sr-only">to {{ lightTheme ? 'dark' : 'light' }} mode</span></span>
         <span class="icon-container">
             <Icon v-if="!lightTheme" class="icon" name="material-symbols:light-mode" />
             <Icon v-else class="icon" name="material-symbols:dark-mode" />
@@ -12,14 +12,22 @@
 <script setup>
 import { useMediaQuery } from '@vueuse/core';
 
-let lightTheme = ref(true)
+
+let lightTheme = useMediaQuery("(prefers-color-scheme:dark)")
+
+
+
+
 const changeColor = () => {
     lightTheme.value = !lightTheme.value
     document.body.dataset.theme = lightTheme.value ? 'light' : 'dark'
-    document.querySelector("html").setAttribute("class",lightTheme.value ? 'light' : 'dark')
+    document.querySelector("html").setAttribute("class", lightTheme.value ? 'light' : 'dark')
 };
 
-onMounted(() => { if (useMediaQuery("prefers-color-scheme:dark").value) changeColor() })
+onMounted(() => {
+    document.body.dataset.theme = lightTheme.value ? 'light' : 'dark'
+    document.querySelector("html").setAttribute("class", lightTheme.value ? 'light' : 'dark')
+})
 
 
 </script>
@@ -38,7 +46,8 @@ $screenSize: (
         @content;
     }
 }
-    .theme-picker {
+
+.theme-picker {
     aspect-ratio: 1;
     font-size: var(--size-6);
 
@@ -64,7 +73,7 @@ $screenSize: (
         translate: 0 3px;
     }
 
-    &:focus{
+    &:focus {
         scale: 1.05;
     }
 
@@ -77,5 +86,4 @@ $screenSize: (
     align-items: center;
     justify-content: center;
 }
-
 </style>

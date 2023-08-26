@@ -8,6 +8,7 @@
                 <NuxtLink :to="project.preview" class="[ home-projectCard-preview ] [ home-projectCard-link ]" target="_blank">Live Preview
                 </NuxtLink>
                 <NuxtLink :to="project.detailPath" class="[ home-projectCard-detail ] [ home-projectCard-link ]">Learn More
+                    <span class="sr-only">about {{ project.name }}</span>
                     <Icon class="home-projectCard-link-arrow" name="mingcute:right-line" />
                 </NuxtLink>
             </div>

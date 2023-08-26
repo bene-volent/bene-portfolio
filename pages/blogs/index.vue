@@ -1,5 +1,5 @@
 <template>
-    <PageSectionContainer class="blogs">
+    <PageSectionContainer class="blogs" aria-label="blogs">
         "BLOGS"
     </PageSectionContainer>
 </template>

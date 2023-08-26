@@ -2,10 +2,11 @@
     <article class="[ projectCard ] [ load-on-scroll ]">
         <NuxtImg :src="project.img" format="webp" loading="lazy" class="projectCard-image" :alt="project.title" />
         <div class="projectCard-content">
-            <h3 class="projectCard-title">{{ project.title }}</h3>
+            <h2 class="projectCard-title">{{ project.title }}</h2>
             <p class="projectCard-desc">{{ project.description }}</p>
 
             <NuxtLink :to="project.path" class="[ projectCard-detail ]">Learn More
+                <span class="sr-only">about {{ project.title }}</span>
                 <Icon class="projectCard-link-arrow" name="mingcute:right-line" />
             </NuxtLink>
         </div>

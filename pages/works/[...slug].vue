@@ -61,7 +61,7 @@ onMounted(() => {
 
 <template>
     <main v-if="project" ref="projectRef">
-        <PageSectionContainer class="project-hero">
+        <PageSectionContainer class="project-hero" aria-label="Project Hero">
 
             <NuxtImg :src="project.img" format="webp" :alt="project.title" class="project-banner" />
             <div class="project-details flow">
@@ -84,12 +84,12 @@ onMounted(() => {
                 </div>
             </div>
         </PageSectionContainer>
-        <PageSectionContainer class="project-content">
+        <PageSectionContainer class="project-content" aria-label="Project Content">
                 <ContentRenderer :value="project" class="content" />
             <aside class="content-toc lg-only">
                 <div class="content-toc-container">
                     <h3 class="content-toc-heading">Page Content</h3>
-                    <nav class="content-toc-nav">
+                    <nav class="content-toc-nav" aria-label="Page Content">
                         <ul class="content-toc-list">
                             <li v-for="heading in project.tabs">
                                 <a :href="'#' + heading.toLowerCase().replaceAll(' ', '-')" class="content-toc-link"
@@ -104,7 +104,7 @@ onMounted(() => {
         <PageCTA heading="Found it interesting?" id="connect-with-me" />
     </main>
     <main v-else>
-        <PageSection
+        <PageSection aria-label="404 page"
             style="min-height: calc(100vh - 250px);display: grid;place-content: center;text-align: center;background-color: hsl(var(--secondary));">
             <h1 class="section-heading" style="">404</h1>
             <p>You are being taken back to works page.</p>

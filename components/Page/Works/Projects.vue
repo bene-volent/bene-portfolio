@@ -1,5 +1,5 @@
 <template>
-    <PageSectionContainer class="projects">
+    <PageSectionContainer class="projects" aria-label="projects">
         <button type="button" class="projects-sort" :data-latest="newFirst" @click="projectSortClickHandler">
             {{ newFirst ? "Latest" : "Oldest" }} First
         </button>

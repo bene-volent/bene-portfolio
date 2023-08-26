@@ -12,7 +12,8 @@
 <script setup>
 let {wrapper} = defineProps(
     {
-        wrapper:String
+        wrapper:String,
     }
 )
+
 </script>

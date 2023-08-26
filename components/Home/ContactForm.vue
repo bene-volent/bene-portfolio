@@ -1,5 +1,5 @@
 <template>
-    <form ref="contactForm" class="contactForm" @submit="handleFormSubmit">
+    <form ref="contactForm" aria-label="Contact" class="contactForm" @submit="handleFormSubmit">
         <div class="contactForm-group"><label for="cta1" class="contactForm-label">Your Name</label><input
                 class="contactForm-input" placeholder=" " autocapitalize="words" autocomplete="off" ref="contactFormName"
                 type="text" name="name" id="cta1" required>

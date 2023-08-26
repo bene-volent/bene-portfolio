@@ -1,5 +1,5 @@
 <template>
-    <PageSectionContainer class="home-projects">
+    <PageSectionContainer class="home-projects" aria-label="projects">
         <div class="home-projects-headContent">
             <h2 class="section-heading">Featured Works</h2>
             <p class="home-projects-subtitle">These are some of my favourite <span class="[ italic bold ]">Frontend Projects</span> that give an

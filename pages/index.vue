@@ -17,11 +17,22 @@ useHead({
     meta: [
         {
             name: "description",
-            content: 'Welcome to my portfolio. Here you can learn about me and my projects.'
+            content: 'Welcome to my portfolio. My name is Raghav / Bene. Here you can learn about me and my projects. I am a Frontend Developer with approximately 1 year\'s experience with HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt.'
         }
     ],
 
+
 });
+useSeoMeta({
+    ogTitle: "Bene's Portfolio",
+    ogDescription: 'Welcome to my portfolio. My name is Raghav / Bene. Here you can learn about me and my projects. I am a Frontend Developer with approximately 1 year\'s experience with HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt.',
+    ogImage: '/favicon.ico',
+    ogUrl: '[og:url]',
+    twitterTitle: '[twitter:title]',
+    twitterDescription: '[twitter:description]',
+    twitterImage: '[twitter:image]',
+    twitterCard: 'summary'
+})
 
 let mainRef = ref(null)
 

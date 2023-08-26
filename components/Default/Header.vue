@@ -20,10 +20,15 @@
 <script>
 import { useWindowScroll, useWindowSize } from '@vueuse/core'
 
+
+
 export default {
     setup() {
         let navOpen = ref(false)
         let headerRef = ref(null)
+
+        
+
         const changeNavState = () => {
             navOpen.value = !navOpen.value
 
@@ -39,13 +44,16 @@ export default {
 
 
 
-        return { navOpen, changeNavState, y, windowWidth: width }
+        return { navOpen, changeNavState, y,  windowWidth: width }
     },
     data() {
         return {
 
         }
     },
+    mounted(){
+        
+    }
 
 
 

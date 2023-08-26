@@ -1,5 +1,5 @@
 <template>
-    <PageSectionContainer class="[ about ]">
+    <PageSectionContainer class="[ about ]" aria-label="about">
         <NuxtImg class="about-img" src="/logo.png" loading="lazy" alt="Bene's Avatar" format="webp" />
         <div class="about-content">
             <h2 class="section-heading">About Me</h2>

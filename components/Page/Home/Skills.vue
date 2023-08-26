@@ -1,5 +1,5 @@
 <template>
-    <PageSectionContainer class="skills">
+    <PageSectionContainer class="skills" aria-label="skills">
         <h2 class="section-heading">Skills</h2>
         <ol class="skills-list">
             <li class="[ skills-group ] [ load-on-scroll ]">

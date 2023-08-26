@@ -1,5 +1,5 @@
 <template>
-    <PageSectionContainer class="cta">
+    <PageSectionContainer class="cta" aria-label="CTA">
         <div class="cta-content">
             <h2 class="section-heading">{{ heading ?  heading : "Get in Touch"  }}</h2>
             <p class="cta-text">I am currently looking for <span class="bold">internship opportunities</span> as <span

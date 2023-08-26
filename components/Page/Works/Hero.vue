@@ -1,5 +1,5 @@
 <template>
-    <PageSectionContainer class="hero">
+    <PageSectionContainer class="hero" aria-label="hero">
         <div class="hero-content">
             <h1 class="section-heading">Works</h1>
             <p class="hero-text">These some of the projects which I wanted to share with everyone.
