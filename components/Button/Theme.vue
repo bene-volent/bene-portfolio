@@ -10,11 +10,6 @@
 </template>
 
 <script setup>
-import { useMediaQuery } from '@vueuse/core';
-
-
-let lightTheme = useMediaQuery("(prefers-color-scheme:dark)")
-
 
 
 
@@ -24,10 +19,7 @@ const changeColor = () => {
     document.querySelector("html").setAttribute("class", lightTheme.value ? 'light' : 'dark')
 };
 
-onMounted(() => {
-    document.body.dataset.theme = lightTheme.value ? 'light' : 'dark'
-    document.querySelector("html").setAttribute("class", lightTheme.value ? 'light' : 'dark')
-})
+
 
 
 </script>
