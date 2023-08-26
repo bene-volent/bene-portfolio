@@ -20,31 +20,6 @@ tabs:
  - Connect with me
 ---
 
-```java
-// CHECK PRIME NUMBER
-
-public class Main {
-
-  public static void main(String[] args) {
-
-    int num = 29;
-    boolean flag = false;
-    for (int i = 2; i <= num / 2; ++i) {
-      // condition for nonprime number
-      if (num % i == 0) {
-        flag = true;
-        break;
-      }
-    }
-
-    if (!flag)
-      System.out.println(num + " is a prime number.");
-    else
-      System.out.println(num + " is not a prime number.");
-  }
-}
-```
-
 ## What is this
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nobis, consequuntur aut enim omnis rem iste molestias dolorem fugiat! Incidunt placeat explicabo a excepturi eos veniam, voluptates, laborum voluptatem delectus animi molestias accusamus illo itaque ipsam. Non officia nulla quasi cumque accusamus dignissimos ullam ducimus numquam optio voluptas earum explicabo enim debitis, velit beatae dicta tempora consequatur iusto nostrum voluptatum accusantium quisquam, placeat alias? Quidem tempora veniam, distinctio earum nobis aperiam porro assumenda rerum qui! Consequatur neque aliquid ipsam similique, eum at provident nesciunt quam ex voluptatum sunt quidem dolor nihil? Incidunt provident sapiente minima repellat illo quod quae explicabo corporis harum, sequi, natus accusantium, laudantium exercitationem neque consequuntur iste dicta delectus numquam! Dolorum culpa soluta cum eligendi alias fugit corrupti quia omnis. Aliquam necessitatibus eum delectus porro exercitationem voluptatem quisquam reprehenderit ratione, qui labore accusamus maiores illum ab cumque asperiores sint quasi beatae quibusdam libero similique nam repellendus assumenda sapiente nemo. Commodi, veniam? Assumenda ex quisquam repudiandae deleniti ullam veritatis ipsum, nemo at minus consequuntur corporis tenetur harum fuga ea iusto consectetur possimus dicta accusamus optio. Distinctio nobis animi, consequuntur, esse reiciendis aliquam quos totam, iusto deserunt porro sit expedita odio? Quibusdam, quos. Modi accusamus consequatur similique consectetur ab.

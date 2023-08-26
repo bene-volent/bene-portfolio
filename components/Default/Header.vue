@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { useResizeObserver, useWindowScroll, useWindowSize } from '@vueuse/core'
+import { useWindowScroll, useWindowSize } from '@vueuse/core'
 
 export default {
     setup() {
