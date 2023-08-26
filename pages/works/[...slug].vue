@@ -106,7 +106,8 @@ onMounted(() => {
         <PageCTA heading="Found it interesting?" id="connect-with-me" />
     </main>
     <main v-else>
-        <PageSection style="min-height: calc(100vh - 250px);display: grid;place-content: center;text-align: center;background-color: hsl(var(--secondary));">
+        <PageSection
+            style="min-height: calc(100vh - 250px);display: grid;place-content: center;text-align: center;background-color: hsl(var(--secondary));">
             <h1 class="section-heading" style="">404</h1>
             <p>You are being taken back to works page.</p>
         </PageSection>
@@ -116,6 +117,8 @@ onMounted(() => {
 
 
 <style lang="scss" >
+@import url("~/assets/prism.css");
+
 $screenSize: (
     lg: 1120px,
     md: 768px,
@@ -341,21 +344,51 @@ $screenSize: (
         margin-block: var(--size-2);
     }
 
-    pre {
-        padding: var(--size-6);
+    // pre,
+    pre:has(code) {
+        display: block;
+        padding: var(--size-1);
         border: 1px solid hsl(var(--primary));
         // font-size: var(--size-4);
         margin-bottom: var(--size-4);
         background-color: hsl(var(--secondary));
 
         border-radius: var(--size-2);
-        font-size: var(--size-3);
+        font-size: 10px;
+        max-width: 330px;
+        // margin-inline: auto;
+        min-width: 100px;
+        overflow-x: visible;
+        overflow-y: hidden;
+
 
         @include mq(sm) {
-            font-size: var(--size-4)
+            max-width: 90%;
+            margin-inline: 0;
+            padding: var(--size-2);
+            font-size: 14px
+        }
+        @include mq(){
+            max-width: 100%;
+            padding: var(--size-6);
+            font-size: 18px;
         }
 
+        &::-webkit-scrollbar {
+            // width: px;
+            height: 5px;
+        }
 
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: hsl(var(--accent) );
+            border-radius: var(--size-2);
+        }
 
 
 

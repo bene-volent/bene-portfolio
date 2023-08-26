@@ -16,6 +16,7 @@ let lightTheme = ref(true)
 const changeColor = () => {
     lightTheme.value = !lightTheme.value
     document.body.dataset.theme = lightTheme.value ? 'light' : 'dark'
+    document.querySelector("html").setAttribute("class",lightTheme.value ? 'light' : 'dark')
 };
 
 onMounted(() => { if (useMediaQuery("prefers-color-scheme:dark").value) changeColor() })
