@@ -11,6 +11,7 @@
 
 <script setup>
 
+let lightTheme = ref(true)
 
 
 const changeColor = () => {
