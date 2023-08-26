@@ -12,12 +12,22 @@ useHead({
    meta: [
       {
          name: "description",
-         content: "Here you can find all of Benevolent/Raghav's projects and in depth details regarding these projects!"
+         content: 'Here you can find all of Bene\'s \\ Raghav\'s projects and in depth details regarding these projects! I use tools such as HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt to make my web applications.'
       }
    ],
 
 });
 
+useSeoMeta({
+    ogTitle: "Bene's Projects",
+    ogDescription: 'Here you can find all of Bene\'s \\ Raghav\'s projects and in depth details regarding these projects! I use tools such as HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt to make my web applications.',
+    ogImage: '/meta-img.png',
+    ogUrl: 'https://bene-portfolio.vercel.app/works/',
+    twitterTitle: 'Bene\'s Projects',
+    twitterDescription: 'Here you can find all of Bene\'s \\ Raghav\'s projects and in depth details regarding these projects! I use tools such as HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt to make my web applications.',
+    twitterImage: '/logo-circle.png',
+    twitterCard: 'This is my projects page.'
+})
 
 let mainRef = ref(null)
 

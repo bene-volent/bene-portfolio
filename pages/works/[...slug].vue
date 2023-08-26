@@ -37,6 +37,17 @@ onMounted(() => {
             ],
 
         });
+
+        useSeoMeta({
+            ogTitle: `Bene's Work | ${project.value.title}`,
+            ogDescription: `${project.value.description}`,
+            ogImage: '/meta-img.png',
+            ogUrl: `https://bene-portfolio.vercel.app${path}`,
+            twitterTitle: `Bene's Work | ${project.value.title}`,
+            twitterDescription: `${project.value.description}`,
+            twitterImage: '/logo-circle.png',
+            twitterCard: `${project.value.description}`
+        })
     }
     else {
 
@@ -53,6 +64,7 @@ onMounted(() => {
             ],
 
         });
+
     }
 })
 
@@ -85,7 +97,7 @@ onMounted(() => {
             </div>
         </PageSectionContainer>
         <PageSectionContainer class="project-content" aria-label="Project Content">
-                <ContentRenderer :value="project" class="content" />
+            <ContentRenderer :value="project" class="content" />
             <aside class="content-toc lg-only">
                 <div class="content-toc-container">
                     <h3 class="content-toc-heading">Page Content</h3>
@@ -274,6 +286,4 @@ $screenSize: (
         }
     }
 }
-
-
 </style>
