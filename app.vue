@@ -17,7 +17,7 @@
 }
 .nuxt-loading-indicator{
     background: hsl(var(--accent)) !important;
-    top: var(--header-height) !important;
+    top: calc(var(--header-height) - 1px) !important;
     
     @include dark(){
         background: hsl(var(--text)) !important;

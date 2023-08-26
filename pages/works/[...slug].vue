@@ -85,9 +85,7 @@ onMounted(() => {
             </div>
         </PageSectionContainer>
         <PageSectionContainer class="project-content">
-            <div class="content">
-                <ContentRenderer :value="project" />
-            </div>
+                <ContentRenderer :value="project" class="content" />
             <aside class="content-toc lg-only">
                 <div class="content-toc-container">
                     <h3 class="content-toc-heading">Page Content</h3>
@@ -117,7 +115,7 @@ onMounted(() => {
 
 
 <style lang="scss" >
-@import url("~/assets/prism.css");
+@use "~/assets/sass/content.scss";
 
 $screenSize: (
     lg: 1120px,
@@ -239,9 +237,10 @@ $screenSize: (
 
     &-content {
         .wrapper {
-            display: flex;
+            display: grid;
 
             @include mq() {
+                grid-template-columns: minmax(518px, 916px) 156px;
                 gap: var(--size-12);
             }
         }
@@ -276,158 +275,5 @@ $screenSize: (
     }
 }
 
-.content {
-    h2 {
-        margin-top: 1.25em;
 
-        @include mq() {
-            font-size: var(--size-7);
-        }
-    }
-
-    p {
-        font-size: 16px;
-
-        @include mq() {
-            font-size: calc(var(--size-4) + (var(--size-1) / 2));
-        }
-
-        @include mq(lg) {
-            font-size: calc(var(--size-5));
-        }
-    }
-
-    h2+p {
-        margin-top: 1em;
-    }
-
-    p+p {
-        margin-top: 0.75em;
-    }
-
-    img,
-    video,
-    svg {
-        margin-block: var(--size-4);
-        border-radius: var(--size-1);
-    }
-
-    ol,
-    ul,
-    dl {
-        margin-top: var(--size-3);
-    }
-
-    ul li {
-        &::marker {
-            color: hsl(var(--accent));
-
-            @include dark() {
-                color: hsl(var(--text));
-            }
-        }
-    }
-
-    ol li {
-        &::marker {
-            font-size: 1.25em;
-            font-weight: 600;
-            color: hsl(var(--accent));
-
-            @include dark() {
-                color: hsl(var(--text));
-            }
-        }
-    }
-
-    hr {
-        margin-block: var(--size-2);
-    }
-
-    // pre,
-    pre:has(code) {
-        display: block;
-        padding: var(--size-1);
-        border: 1px solid hsl(var(--primary));
-        // font-size: var(--size-4);
-        margin-bottom: var(--size-4);
-        background-color: hsl(var(--secondary));
-
-        border-radius: var(--size-2);
-        font-size: 10px;
-        max-width: 330px;
-        // margin-inline: auto;
-        min-width: 100px;
-        overflow-x: visible;
-        overflow-y: hidden;
-
-
-        @include mq(sm) {
-            max-width: 90%;
-            margin-inline: 0;
-            padding: var(--size-2);
-            font-size: 14px
-        }
-        @include mq(){
-            max-width: 100%;
-            padding: var(--size-6);
-            font-size: 18px;
-        }
-
-        &::-webkit-scrollbar {
-            // width: px;
-            height: 5px;
-        }
-
-        /* Track */
-        &::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        /* Handle */
-        &::-webkit-scrollbar-thumb {
-            background: hsl(var(--accent) );
-            border-radius: var(--size-2);
-        }
-
-
-
-    }
-
-    *+pre {
-        margin-top: var(--size-4);
-    }
-
-    p code {
-        background-color: hsl(var(--secondary));
-        padding: var(--size-1);
-        font-weight: 400;
-        font-size: var(--size-3);
-
-        @include mq(sm) {
-            font-size: var(--size-4)
-        }
-
-    }
-
-    a:not([href^="#"]) {
-        text-decoration: underline;
-
-        color: rgb(79, 93, 255);
-
-
-
-        &:hover {
-            text-underline-offset: 0.25em;
-        }
-
-    }
-
-    .contains-task-list {
-        list-style: none;
-        padding-left: 0;
-
-
-    }
-}
 </style>
