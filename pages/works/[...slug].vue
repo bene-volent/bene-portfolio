@@ -257,7 +257,7 @@ $screenSize: (
             &-list {
                 list-style: none;
                 padding-left: var(--size-2);
-                border-left: 2px solid hsl(var(--text));
+                border-left: 2px solid hsl(var(--accent));
                 display: flex;
                 flex-direction: column;
             }

@@ -131,9 +131,6 @@ $screenSize: (
         &::marker {
             color: hsl(var(--accent));
 
-            @include dark() {
-                color: hsl(var(--text));
-            }
         }
     }
 
@@ -143,9 +140,7 @@ $screenSize: (
             font-weight: 600;
             color: hsl(var(--accent));
 
-            @include dark() {
-                color: hsl(var(--text));
-            }
+          
         }
     }
 
