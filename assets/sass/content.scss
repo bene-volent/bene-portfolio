@@ -90,12 +90,15 @@ $screenSize: (
        
     }
 
-    h2 {
-        margin-top: 1.25em;
-
+    h2{
         @include mq() {
             font-size: var(--size-7);
         }
+    }
+    * ~ h2 {
+        margin-top: 1.25em;
+
+        
     }
 
     p {
