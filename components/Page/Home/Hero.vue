@@ -42,5 +42,6 @@ const playPop=()=>{
     let pop = new Audio("/sound/pop.mp3")
     console.log("POP")
     pop.play()
+    
 }
 </script>
