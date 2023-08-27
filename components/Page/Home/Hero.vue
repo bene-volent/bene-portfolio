@@ -18,16 +18,16 @@
             </div>
             <ul class="home-hero-socials" >
                 <li class="home-hero-social" style="--_index-val:0">
-                    <SocialsLinkedIn class="hero-social-link" />
+                    <SocialsLinkedIn @mouseenter="playPop" class="hero-social-link"/>
                 </li>
                 <li class="home-hero-social" style="--_index-val:1">
-                    <SocialsGithub class="hero-social-link" />
+                    <SocialsGithub @mouseenter="playPop" class="hero-social-link" />
                 </li>
                 <li class="home-hero-social" style="--_index-val:2">
-                    <SocialsTwitter class="hero-social-link" />
+                    <SocialsTwitter @mouseenter="playPop" class="hero-social-link" />
                 </li>
                 <li class="home-hero-social" style="--_index-val:3">
-                    <SocialsMail class="hero-social-link" />
+                    <SocialsMail @mouseenter="playPop" class="hero-social-link" />
                 </li>
             </ul>
             <a href="#about" class="home-hero-down">
@@ -37,8 +37,10 @@
         </div>
     </PageSectionContainer>
 </template>
-<script>
-export default {
-
+<script setup>
+const playPop=()=>{
+    let pop = new Audio("/sound/pop.mp3")
+    console.log("POP")
+    pop.play()
 }
 </script>

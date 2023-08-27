@@ -53,39 +53,40 @@ $screenSize: (
     blockquote {
         position: relative;
 
-        padding: var(--size-2) var(--size-4);
-
+        padding: var(--size-4) var(--size-4);
 
         background-color: hsl(var(--secondary) / 0.4);
-        border-radius: var(--size-2);
+        border-bottom-right-radius: var(--size-1);
+        border-top-right-radius: var(--size-1);
 
-        border: 2px solid hsl(var(--accent));
+        // border: 2px solid hsl(var(--accent));
         @include mq(sm) {
-            border-radius: var(--size-3);
             padding: var(--size-4);
         }
         @include mq() {
             padding: var(--size-5);
-            border-radius: var(--size-4);
         }
 
-        p + p{
-            margin-top: 0;
+        &::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            border-radius: var(--size-1);
+
+            width: var(--size-1);
+            height: 100%;
+
+            background-color: hsl(var(--accent));
         }
-        // &::before{
-        //     content: "";
+    }
 
-        //     position: absolute;
-        //     left: 0;
-        //     top: 0;
-
-        //     border-radius: var(--size-1);
-
-        //     width: var(--size-1);
-        //     height: 100%;
-
-        //     background-color: hsl(var(--accent));
-        // }
+    & :not(pre) code {
+        background-color: hsl(var(--secondary));
+        padding: 2.5px 6px;
+        border-radius: var(--size-1);
     }
 
     pre code {
@@ -102,7 +103,6 @@ $screenSize: (
         padding: var(--size-2);
         border: 1px solid hsl(var(--primary));
         // font-size: var(--size-4);
-        margin-bottom: var(--size-4);
         background-color: hsl(var(--secondary));
 
         border-radius: var(--size-2);
@@ -140,9 +140,6 @@ $screenSize: (
             font-size: var(--size-7);
         }
     }
-    * ~ h2 {
-        margin-top: 1.25em;
-    }
 
     p {
         font-size: 16px;
@@ -156,25 +153,20 @@ $screenSize: (
         }
     }
 
-    h2 + p {
-        margin-top: 1em;
-    }
-
-    p + p {
-        margin-top: 0.75em;
-    }
-
     img,
     video,
     svg {
-        margin-block: var(--size-4);
         border-radius: var(--size-2);
     }
 
-    ol,
-    ul,
-    dl {
-        margin-top: var(--size-3);
+    li {
+        -webkit-margin-before: 0.5em;
+                margin-block-start: 0.5em;
+    }
+
+    ul,ol{
+        -webkit-padding-start: 1em;
+                padding-inline-start: 1em;
     }
 
     ul li {
@@ -191,25 +183,16 @@ $screenSize: (
         }
     }
 
-    hr {
-        margin-block: var(--size-2);
-    }
-
     pre,
     pre:has(code) {
         overflow-x: visible;
         overflow-y: hidden;
     }
 
-    * + pre {
-        margin-top: var(--size-4);
-    }
-
     p code {
         background-color: hsl(var(--secondary));
-        padding: var(--size-1);
         font-weight: 400;
-        font-size: var(--size-3);
+        font-size: var(--size-4);
 
         @include mq(sm) {
             font-size: var(--size-4);
@@ -225,8 +208,8 @@ $screenSize: (
             text-underline-offset: 0.25em;
         }
 
-        @include dark(){
-            color:#ff0
+        @include dark() {
+            color: #ff0;
         }
     }
 

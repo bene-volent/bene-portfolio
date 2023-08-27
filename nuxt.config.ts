@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import {resolve} from 'path'
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   alias:{
     "@": resolve(__dirname,"/")
   },
@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   css:[
-    "~/assets/sass/main.scss",
+    "~/assets/sass/global.scss",
   ],
   modules: ["nuxt-icon","@nuxt/image",'@nuxt/content'],
   content: {

@@ -11,11 +11,55 @@ try {
 
     const { data } = await useAsyncData(`content-${path}`, () => queryContent().where({ _path: path }).findOne())
     project = data
+
+    useHead({
+
+        title: `Bene's Work | ${project.value.title}`,
+        meta: [
+            {
+                name: "description",
+                content: `${project.value.description}`
+            }
+        ],
+        link: [
+            {
+                rel: 'canonical',
+                href: `https://bene-portfolio.vercel.app${path}`
+            }
+        ]
+    });
+
+    useSeoMeta({
+
+        ogTitle: `Bene's Work | ${project.value.title}`,
+        ogDescription: `${project.value.description}`,
+        ogImage: `https://bene-portfolio.vercel.app/${project.value.img}`,
+        ogUrl: `https://bene-portfolio.vercel.app${path}`,
+        twitterTitle: `Bene's Work | ${project.value.title}`,
+        twitterDescription: `${project.value.description}`,
+        twitterImage: 'https://bene-portfolio.vercel.app/logo-circle.png',
+        twitterCard: `${project.value.description}`,
+        twitterCreator: "@bene_volent_"
+
+    })
+
+
 } catch (error) {
-    // Error has been handled on mount and by a 404 page.
+    // navigateTo()
+    useTimeout(2000, { callback: () => { navigateTo("/works") } })
+    useHead({
+
+        title: `Bene's Work | 404`,
+        meta: [
+            {
+                name: "description",
+                content: `There is project with this name. All projects are given in the root works page.`
+            }
+        ],
+
+    });
+
 }
-
-
 
 onMounted(() => {
     // console.log(project,projectRef)
@@ -25,57 +69,7 @@ onMounted(() => {
             anchor.setAttribute("target", "_blank")
         })
     }
-    if (project.value) {
-        useHead({
 
-            title: `Bene's Work | ${project.value.title}`,
-            meta: [
-                {
-                    name: "description",
-                    content: `${project.value.description}`
-                }
-            ],
-            link: [
-                {
-                    rel: 'canonical',
-                    href: `https://bene-portfolio.vercel.app${path}`
-                }
-            ]
-        });
-
-        useSeoMeta({
-
-            ogTitle: `Bene's Work | ${project.value.title}`,
-            ogDescription: `${project.value.description}`,
-            ogImage: `https://bene-portfolio.vercel.app/${project.value.img}`,
-            ogUrl: `https://bene-portfolio.vercel.app${path}`,
-            twitterTitle: `Bene's Work | ${project.value.title}`,
-            twitterDescription: `${project.value.description}`,
-            twitterImage: 'https://bene-portfolio.vercel.app/logo-circle.png',
-            twitterCard: `${project.value.description}`,
-            twitterCreator: "@bene_volent_"
-
-        })
-
-    }
-
-    else {
-
-        // navigateTo()
-        useTimeout(2000, { callback: () => { navigateTo("/works") } })
-        useHead({
-
-            title: `Bene's Work | 404`,
-            meta: [
-                {
-                    name: "description",
-                    content: `There is project with this name. All projects are given in the root works page.`
-                }
-            ],
-
-        });
-
-    }
 })
 
 
@@ -107,7 +101,7 @@ onMounted(() => {
             </div>
         </PageSectionContainer>
         <PageSectionContainer class="project-content" aria-label="Project Content">
-            <ContentRenderer :value="project" class="content" />
+            <ContentRenderer :value="project" class="content flow" />
             <aside class="content-toc lg-only">
                 <div class="content-toc-container">
                     <h3 class="content-toc-heading">Page Content</h3>

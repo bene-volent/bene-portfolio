@@ -34,6 +34,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nobis, consequunt
 ## Conceptualization
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae corrupti soluta modi ducimus voluptate necessitatibus, adipisci, quidem nesciunt velit neque omnis! Soluta repellat repudiandae non alias earum, adipisci totam quod, voluptatibus, laudantium minus cum. Culpa hic sunt soluta officia, temporibus repudiandae sed asperiores corporis quae commodi eaque dolor. Qui autem incidunt numquam earum odit odio ea quia nesciunt maxime veritatis veniam dicta doloribus consequatur aliquam praesentium eum accusantium ipsum perspiciatis culpa distinctio ratione, saepe dignissimos! Quaerat, eum alias sed numquam dignissimos aliquam atque delectus libero eveniet necessitatibus quisquam nisi aut molestiae. Vel saepe eligendi beatae ducimus, corrupti est velit laborum.
+
 ![Img](/works/better-decor-signup-banner.png)
 
 ## Designing
