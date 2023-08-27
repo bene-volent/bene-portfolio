@@ -70,4 +70,6 @@ onMounted(() => {
 
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use "~/assets/sass/works.scss"
+</style>
