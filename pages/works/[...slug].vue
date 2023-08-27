@@ -35,28 +35,30 @@ onMounted(() => {
                     content: `${project.value.description}`
                 }
             ],
-           link:[
-            {
-                rel:'canonical',
-                href:`https://bene-portfolio.vercel.app${path}`
-            }
-           ]
+            link: [
+                {
+                    rel: 'canonical',
+                    href: `https://bene-portfolio.vercel.app${path}`
+                }
+            ]
         });
 
         useSeoMeta({
-            
+
             ogTitle: `Bene's Work | ${project.value.title}`,
             ogDescription: `${project.value.description}`,
-            ogImage: 'https://bene-portfolio.vercel.app/meta-img.png',
+            ogImage: `https://bene-portfolio.vercel.app/${project.value.img}`,
             ogUrl: `https://bene-portfolio.vercel.app${path}`,
             twitterTitle: `Bene's Work | ${project.value.title}`,
             twitterDescription: `${project.value.description}`,
             twitterImage: 'https://bene-portfolio.vercel.app/logo-circle.png',
             twitterCard: `${project.value.description}`,
-    twitterCreator:"@bene_volent_"
+            twitterCreator: "@bene_volent_"
 
         })
+
     }
+
     else {
 
         // navigateTo()
@@ -257,10 +259,15 @@ $screenSize: (
 
     &-content {
         .wrapper {
+
             display: grid;
+            max-width: 55ch;
+            margin-inline: auto;
 
             @include mq() {
-                grid-template-columns: minmax(518px, 916px) 156px;
+                // max-width: 100%;
+                max-width: fit-content;
+                grid-template-columns: clamp(45ch, 60vw, 65ch) 156px;
                 gap: var(--size-12);
             }
         }

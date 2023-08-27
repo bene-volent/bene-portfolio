@@ -20,6 +20,18 @@ $screenSize: (
 
 .content {
     display: grid;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
 
     // Experimenting
     /* For all <code> */
@@ -36,6 +48,44 @@ $screenSize: (
         word-wrap: break-word;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
+    }
+
+    blockquote {
+        position: relative;
+
+        padding: var(--size-2) var(--size-4);
+
+
+        background-color: hsl(var(--secondary) / 0.4);
+        border-radius: var(--size-2);
+
+        border: 2px solid hsl(var(--accent));
+        @include mq(sm) {
+            border-radius: var(--size-3);
+            padding: var(--size-4);
+        }
+        @include mq() {
+            padding: var(--size-5);
+            border-radius: var(--size-4);
+        }
+
+        p + p{
+            margin-top: 0;
+        }
+        // &::before{
+        //     content: "";
+
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+
+        //     border-radius: var(--size-1);
+
+        //     width: var(--size-1);
+        //     height: 100%;
+
+        //     background-color: hsl(var(--accent));
+        // }
     }
 
     pre code {
@@ -118,7 +168,7 @@ $screenSize: (
     video,
     svg {
         margin-block: var(--size-4);
-        border-radius: var(--size-1);
+        border-radius: var(--size-2);
     }
 
     ol,
@@ -130,7 +180,6 @@ $screenSize: (
     ul li {
         &::marker {
             color: hsl(var(--accent));
-
         }
     }
 
@@ -139,8 +188,6 @@ $screenSize: (
             font-size: 1.25em;
             font-weight: 600;
             color: hsl(var(--accent));
-
-          
         }
     }
 
@@ -176,6 +223,10 @@ $screenSize: (
 
         &:hover {
             text-underline-offset: 0.25em;
+        }
+
+        @include dark(){
+            color:#ff0
         }
     }
 

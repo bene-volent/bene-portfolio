@@ -305,6 +305,13 @@ body {
     }
 }
 
+.mq-above{
+    display: none;
+    @include mq(sm) {
+        display: block;
+    }
+}
+
 .lg-only {
     display: none;
     @include mq() {

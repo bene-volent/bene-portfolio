@@ -3,7 +3,7 @@
         <ul class="nav-list">
             <li class="nav-item">
                 <NuxtLink class="nav-link" to="/" @click="() => { clickMenuButton() }"
-                    :data-active="!($route.path.includes('blogs') || $route.path.includes('works'))">Home</NuxtLink>
+                    :data-active="!($route.path.includes('blog') || $route.path.includes('works'))">Home</NuxtLink>
             </li>
 
             <li class="nav-item">
@@ -14,8 +14,8 @@
                     :data-active="$route.path.includes('works')">Works</NuxtLink>
             </li>
             <li class="nav-item">
-                <NuxtLink class="nav-link " @click="() => { clickMenuButton() }" to="/blogs"
-                    :data-active="$route.path.includes('blogs')">Blogs</NuxtLink>
+                <NuxtLink class="nav-link " @click="() => { clickMenuButton() }" to="/blog"
+                    :data-active="$route.path.includes('blog')">Blog</NuxtLink>
             </li>
         </ul>
     </nav>

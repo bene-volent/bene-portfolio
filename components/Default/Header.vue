@@ -1,5 +1,5 @@
 <template>
-    <header ref="headerRef" class="header" :data-on-top="y < 25" :data-is-home="!($route.path.includes('blogs') || $route.path.includes('works'))">
+    <header ref="headerRef" class="header" :data-on-top="y<25" :data-is-home="!($route.path.includes('blog') || $route.path.includes('works'))">
         <div class="container">
             <div class="wrapper">
                 <NuxtLink class="header-logo" to="/">
@@ -40,7 +40,9 @@ export default {
         }
 
         let { width } = useWindowSize()
-        const { y } = useWindowScroll()
+        let { y } = useWindowScroll()
+    
+
 
 
 
