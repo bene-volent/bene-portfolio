@@ -12,6 +12,69 @@ $screenSize: (
 
 /***** Hero *****/
 .home-hero {
+    position: relative;
+}
+
+.home-shape-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    -webkit-animation:from-below 500ms ease forwards;
+
+            animation:from-below 500ms ease forwards;
+}
+
+@-webkit-keyframes from-below {
+    0%{
+        opacity: 0;
+        translate: 0 50%;
+    }
+    100%{
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes from-below {
+    0%{
+        opacity: 0;
+        translate: 0 50%;
+    }
+    100%{
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+.home-shape-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(200% + 1.3px);
+    height: 200px;
+    scale: 4 1;
+
+    @include mq(sm){
+        height: 150px;
+        scale: 3 1;
+    }
+    @include mq(){
+        height: 125px;
+        scale: 2 1;
+    }
+    @include mq(lg){
+        height: 100px;
+        scale:1 1;
+    }
+}
+
+.home-shape-bottom .shape-fill {
+    fill: hsl(var(--primary));
+}
+.home-hero {
     .wrapper {
         padding-block: 0;
         padding-top: var(--size-10);
@@ -29,7 +92,7 @@ $screenSize: (
     }
 
     &-title {
-        font-size: clamp(var(--size-7), 10vw, var(--size-9));
+        font-size: clamp(var(--size-7), 10vw, var(--size-15));
 
         &-name {
             position: relative;
@@ -152,11 +215,11 @@ $screenSize: (
         font-size: var(--size-16);
         margin-inline: auto;
 
+        
+
         @include mq() {
             font-size: var(--size-30);
-            margin-inline: 0;
-            margin-left: auto;
-            margin-right: 10%;
+
         }
     }
 }
