@@ -24,20 +24,20 @@ try {
         link: [
             {
                 rel: 'canonical',
-                href: `https://bene-portfolio.vercel.app${path}`
+                href: `https://beneisadev.vercel.app${path}`
             }
         ]
     });
-
-    useSeoMeta({
+    
+    useServerSeoMeta({
 
         ogTitle: `Bene's Work | ${project.value.title}`,
         ogDescription: `${project.value.description}`,
-        ogImage: `https://bene-portfolio.vercel.app/${project.value.img}`,
-        ogUrl: `https://bene-portfolio.vercel.app${path}`,
+        ogImage: `https://beneisadev.vercel.app/${project.value.img}`,
+        ogUrl: `https://beneisadev.vercel.app${path}`,
         twitterTitle: `Bene's Work | ${project.value.title}`,
         twitterDescription: `${project.value.description}`,
-        twitterImage: 'https://bene-portfolio.vercel.app/logo-circle.png',
+        twitterImage: 'https://beneisadev.vercel.app/logo-circle.png',
         twitterCard: `${project.value.description}`,
         twitterCreator: "@bene_volent_"
 

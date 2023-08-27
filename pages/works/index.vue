@@ -19,20 +19,20 @@ useHead({
       link: [
          {
             rel: 'canonical',
-            href: `https://bene-portfolio.vercel.app/works`
+            href: `https://beneisadev.vercel.app/works`
          }
    ],
 
 });
 
-useSeoMeta({
+useServerSeoMeta({
    ogTitle: "Bene's Projects",
    ogDescription: 'Here you can find all of Bene\'s \\ Raghav\'s projects and in depth details regarding these projects! I use tools such as HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt to make my web applications.',
-   ogImage: 'https://bene-portfolio.vercel.app/meta-img.png',
-   ogUrl: 'https://bene-portfolio.vercel.app/works/',
+   ogImage: 'https://beneisadev.vercel.app/meta-img.png',
+   ogUrl: 'https://beneisadev.vercel.app/works/',
    twitterTitle: 'Bene\'s Projects',
    twitterDescription: 'Here you can find all of Bene\'s \\ Raghav\'s projects and in depth details regarding these projects! I use tools such as HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt to make my web applications.',
-   twitterImage: 'https://bene-portfolio.vercel.app/logo-circle.png',
+   twitterImage: 'https://beneisadev.vercel.app/logo-circle.png',
    twitterCard: 'This is my projects page.',
    twitterCreator:"@bene_volent_"
 
