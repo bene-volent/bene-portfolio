@@ -45,7 +45,38 @@ try {
     const { data } = await useAsyncData(`content-${path}`, () => queryContent().where({ _path: path }).findOne())
     article = data
     article.value.createdOn = new Date(article.value.createdOn)
-    
+
+    useHead({
+
+        title: `Bene's Blog | ${article.value.title}`,
+        meta: [
+            {
+                name: "description",
+                content: `${article.value.subtitle}`
+            }
+        ],
+        link: [
+            {
+                rel: 'canonical',
+                href: `https://beneisadev.vercel.app${path}`
+            }
+        ]
+    });
+
+    useServerSeoMeta({
+
+        ogTitle: `Bene's Blog | ${article.value.title}`,
+        ogDescription: `${article.value.description}`,
+        ogImage: `https://beneisadev.vercel.app/${article.value.img}`,
+        ogUrl: `https://beneisadev.vercel.app${path}`,
+        twitterTitle: `Bene's Work | ${article.value.title}`,
+        twitterDescription: `${article.value.description}`,
+        twitterImage: 'https://beneisadev.vercel.app/logo-circle.png',
+        twitterCard: `${article.value.description}`,
+        twitterCreator: "@bene_volent_"
+
+    })
+
 }
 catch (error) {
     // Error has been handled on mount and by a 404 page.
