@@ -66,7 +66,6 @@ $screenSize: (
         scale: 2 1;
     }
     @include mq(lg){
-        height: 100px;
         scale:1 1;
     }
 }
