@@ -42,7 +42,19 @@ try {
         twitterCreator: "@bene_volent_"
 
     })
+    useSeoMeta({
 
+ogTitle: `Bene's Work | ${project.value.title}`,
+ogDescription: `${project.value.description}`,
+ogImage: `https://beneisadev.vercel.app/${project.value.img}`,
+ogUrl: `https://beneisadev.vercel.app${path}`,
+twitterTitle: `Bene's Work | ${project.value.title}`,
+twitterDescription: `${project.value.description}`,
+twitterImage: 'https://beneisadev.vercel.app/logo-circle.png',
+twitterCard: `${project.value.description}`,
+twitterCreator: "@bene_volent_"
+
+})
 
 } catch (error) {
     // navigateTo()

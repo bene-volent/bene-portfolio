@@ -52,7 +52,18 @@ useServerSeoMeta({
 
 })
 
+useSeoMeta({
+    ogTitle: "Bene's Blogs",
+    ogDescription: 'This is Bene\'s \\ Raghav\'s personal blog. Here you can find all my imaginations and my experiences with frontend and coding tools. Currently this page is a work in progress!',
+    ogImage: 'https://beneisadev.vercel.app/meta-img.png',
+    ogUrl: 'https://beneisadev.vercel.app/blog/',
+    twitterTitle: 'Bene\'s Blogs',
+    twitterDescription: 'This is Bene\'s \\ Raghav\'s personal blog. Here you can find all my imaginations and my experiences with frontend and coding tools. Currently this page is a work in progress!',
+    twitterImage: 'https://beneisadev.vercel.app/logo-circle.png',
+    twitterCard: 'This is Bene\'s \\ Raghav\'s personal blog. Here you can find all my imaginations and my experiences with frontend and coding tools. Currently this page is a work in progress!',
+    twitterCreator: "@bene_volent_"
 
+})
 const { data } = await useAsyncData("content-works", () => queryContent('/blog').find())
 const articles = data.value
 articles.forEach((article) => { article.createdOn = new Date(article.createdOn) })

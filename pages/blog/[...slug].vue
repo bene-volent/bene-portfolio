@@ -77,6 +77,19 @@ try {
 
     })
 
+    useSeoMeta({
+
+ogTitle: `Bene's Blog | ${article.value.title}`,
+ogDescription: `${article.value.description}`,
+ogImage: `https://beneisadev.vercel.app/${article.value.img}`,
+ogUrl: `https://beneisadev.vercel.app${path}`,
+twitterTitle: `Bene's Work | ${article.value.title}`,
+twitterDescription: `${article.value.description}`,
+twitterImage: 'https://beneisadev.vercel.app/logo-circle.png',
+twitterCard: `${article.value.description}`,
+twitterCreator: "@bene_volent_"
+
+})
 }
 catch (error) {
     // Error has been handled on mount and by a 404 page.

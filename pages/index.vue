@@ -38,6 +38,17 @@ useServerSeoMeta({
     twitterCard: 'This is my portfolio.',
     twitterCreator:"@bene_volent_",
 })
+useSeoMeta({
+    ogTitle: "Bene's Portfolio",
+    ogDescription: 'Welcome to my portfolio. My name is Raghav \\ Bene. Here you can learn about me and my projects. I am a Frontend Developer with approximately 1 year\'s experience with HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt.',
+    ogImage: 'https://beneisadev.vercel.app/meta-img.png',
+    ogUrl: 'https://beneisadev.vercel.app',
+    twitterTitle: 'Bene\'s Portfolio',
+    twitterDescription: 'Welcome to my portfolio. My name is Raghav \\ Bene. Here you can learn about me and my projects. I am a Frontend Developer with approximately 1 year\'s experience with HTML CSS and JS and few frameworks such as React, Next, Vue and Nuxt.',
+    twitterImage: 'https://beneisadev.vercel.app/logo-circle.png',
+    twitterCard: 'This is my portfolio.',
+    twitterCreator:"@bene_volent_",
+})
 
 let mainRef = ref(null)
 
