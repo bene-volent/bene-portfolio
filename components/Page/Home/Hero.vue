@@ -26,11 +26,11 @@
                 </h1>
                 <p class="home-hero-dev">Frontend Developer</p>
                 <div class="home-hero-content">
-                    <!-- <div class="home-hero-subtitle flow">
+                    <div class="home-hero-subtitle flow sm-only">
                         <p class="home-hero-skills">I specialize in creating responsive and accessible <span
                                 class="[ italic bold accent large ]">Web</span> and <span class="[ italic bold accent large ]">Mobile</span>
                             applications</p>
-                    </div> -->
+                    </div>
                     <ul class="home-hero-socials">
                         <li class="home-hero-social" style="--_index-val:0">
                             <SocialsLinkedIn class="hero-social-link" />

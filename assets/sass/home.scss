@@ -78,7 +78,7 @@ $screenSize: (
     .wrapper {
         padding-block: 0;
         padding-top: var(--size-10);
-        min-height: clamp(600px, calc(100vh - var(--header-height)), 750px);
+        min-height: clamp(600px, calc(100dvh - var(--header-height)), 750px);
 
         display: flex;
         flex-direction: column;
@@ -219,7 +219,10 @@ $screenSize: (
 
         @include mq() {
             font-size: var(--size-30);
-
+            opacity: 0;
+            &:focus{
+                opacity: 1;
+            }
         }
     }
 }
