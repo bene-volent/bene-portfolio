@@ -11,7 +11,6 @@ try {
 
     const { data } = await useAsyncData(`content-${path}`, () => queryContent().where({ _path: path }).findOne())
     project = data
-
     useHead({
 
         title: `Bene's Work | ${project.value.title}`,
