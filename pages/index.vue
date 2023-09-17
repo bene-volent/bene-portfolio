@@ -1,7 +1,7 @@
 <template>
     <main data-no-js="true" ref="mainRef">
         <PageHomeHero id="" />
-        <PageHomeAbout id="about" class="[ load-on-scroll ]" />
+        <PageHomeAbout id="about" />
         <PageHomeSkills id="skills" />
         <PageHomeProjects id="projects" />
         <PageCTA id="contact" />
